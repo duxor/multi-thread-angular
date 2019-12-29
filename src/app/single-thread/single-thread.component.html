@@ -1,0 +1,9 @@
+<h1>Single Thread Calculation</h1>
+
+<app-calculation-form [inProgress$]="inProgress$" (submitted)="runWorker($event)"></app-calculation-form>
+
+<div>
+  <p *ngFor="let output of output$ | async; trackBy: trackById">
+    {{ output.value }}
+  </p>
+</div>
