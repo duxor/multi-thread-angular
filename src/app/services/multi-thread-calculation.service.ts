@@ -20,14 +20,21 @@ export class MultiThreadCalculationService extends CalculationService {
 
     webworker.onmessage = (data) => {
       this.addOutput(`[${name}] calculation result: ${data.data}`);
+
       const endTime = new Date();
-      this.addOutput(`[${name}] finished at ${endTime.toUTCString()}, execution time: ${(endTime.getTime() - startTime.getTime()) / 1000}!`);
+      const executionTime = (endTime.getTime() - startTime.getTime()) / 1000;
+
+      this.addOutput(`[${name}] finished at ${endTime.toUTCString()}, execution time: ${executionTime}!`);
       this.inProgress$.next(this.inProgress$.getValue() - 1);
+
+      webworker.terminate();
     };
 
     webworker.onerror = (data) => {
       console.error(data);
       this.inProgress$.next(this.inProgress$.getValue() - 1);
+
+      webworker.terminate();
     };
 
     webworker.postMessage(this.difficulty);

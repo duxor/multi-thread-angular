@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {BehaviorSubject} from 'rxjs';
 import {Output} from 'src/app/models/output';
-import {FormBuilder} from '@angular/forms';
 import {trackById} from 'src/app/utils/track-by-id';
 import {MultiThreadCalculationService} from 'src/app/services/multi-thread-calculation.service';
 
