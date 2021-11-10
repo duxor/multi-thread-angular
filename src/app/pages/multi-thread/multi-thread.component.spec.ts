@@ -1,6 +1,6 @@
-import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import {MultiThreadComponent} from './multi-thread.component';
+import { MultiThreadComponent } from './multi-thread.component';
 
 describe('MultiThreadComponent', () => {
   let component: MultiThreadComponent;
@@ -8,9 +8,8 @@ describe('MultiThreadComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-        declarations: [MultiThreadComponent],
-      })
-      .compileComponents();
+      declarations: [MultiThreadComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

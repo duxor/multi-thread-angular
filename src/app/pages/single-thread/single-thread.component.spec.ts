@@ -1,6 +1,6 @@
-import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import {SingleThreadComponent} from './single-thread.component';
+import { SingleThreadComponent } from './single-thread.component';
 
 describe('SingleThreadComponent', () => {
   let component: SingleThreadComponent;
@@ -8,9 +8,8 @@ describe('SingleThreadComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-        declarations: [SingleThreadComponent],
-      })
-      .compileComponents();
+      declarations: [SingleThreadComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
