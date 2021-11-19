@@ -1,14 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SingleThreadComponent } from 'src/app/pages/single-thread/single-thread.component';
-import { MultiThreadComponent } from 'src/app/pages/multi-thread/multi-thread.component';
 
-const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'multi-thread' },
-  { path: 'single-thread', component: SingleThreadComponent },
-  { path: 'multi-thread', component: MultiThreadComponent },
-  { path: '**', redirectTo: 'multi-thread' },
-];
+const routes: Routes = [{ path: '**', redirectTo: '' }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

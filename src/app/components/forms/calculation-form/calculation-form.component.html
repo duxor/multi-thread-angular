@@ -1,7 +1,7 @@
 <form *ngIf="form" (ngSubmit)="emitSubmittedEvent()" [formGroup]="form">
   <p>
     Difficulty:
-    <input formControlName="difficulty" />
+    <input formControlName="difficulty" type="number" />
   </p>
 
   <p>
@@ -16,7 +16,7 @@
   <p>
     <button [disabled]="inProgress">
       <ng-container *ngIf="!inProgress">Run calculation</ng-container>
-      <ng-container *ngIf="inProgress">Calculation in progress</ng-container>
+      <ng-container *ngIf="inProgress">Calculation in progress ...</ng-container>
     </button>
   </p>
 </form>

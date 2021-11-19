@@ -8,6 +8,7 @@ import {
 } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { environment } from 'src/environments/environment';
+import { WorkerConfig } from 'src/app/models/worker-config';
 
 @Component({
   selector: 'app-calculation-form',
@@ -18,10 +19,7 @@ import { environment } from 'src/environments/environment';
 export class CalculationFormComponent implements OnInit {
   @Input() inProgress = false;
 
-  @Output() submitted = new EventEmitter<{
-    difficulty: number;
-    processCount: number;
-  }>();
+  @Output() submitted = new EventEmitter<WorkerConfig>();
 
   form = this.fb.group({
     difficulty: [environment.difficulty],

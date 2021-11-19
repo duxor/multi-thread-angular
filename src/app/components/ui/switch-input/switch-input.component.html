@@ -1,0 +1,19 @@
+<form *ngIf="control" class="tabber">
+  <label for="t1">Single Thread</label>
+  <input
+    id="t1"
+    name="single"
+    type="radio"
+    [formControl]="control"
+    [value]="ThreadType.Single"
+  />
+  <label for="t2">Multi Thread</label>
+  <input
+    id="t2"
+    name="single"
+    type="radio"
+    [formControl]="control"
+    [value]="ThreadType.Multi"
+  />
+  <div class="blob"></div>
+</form>
